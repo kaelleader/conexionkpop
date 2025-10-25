@@ -1,0 +1,57 @@
+/* === Efecto GRID animado solo en el área principal === */
+
+/* Contenedor para el efecto */
+.main-area {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+}
+
+/* Fondo del grid */
+.main-area::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle, rgba(255,255,255,0.08) 1px, transparent 1px);
+  background-size: 40px 40px;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  z-index: 0;
+  pointer-events: none;
+  animation: drift 10s linear infinite;
+}
+
+/* Aparece cuando pasas el ratón sobre el área */
+.main-area:hover::before {
+  opacity: 1;
+}
+
+/* Movimiento sutil del grid */
+@keyframes drift {
+  from { background-position: 0 0; }
+  to { background-position: 80px 80px; }
+}
+
+
+/* Luz dinámica que sigue el ratón (más corta) */
+.main-area::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at var(--x, 50%) var(--y, 50%),
+    rgba(255,255,255,0.25) 0%,
+    rgba(255,255,255,0.1) 6%,
+    transparent 15%
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+  pointer-events: none;
+}
+
+
+
+.main-area:hover::after {
+  opacity: 1;
+}

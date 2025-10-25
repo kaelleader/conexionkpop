@@ -1,0 +1,13 @@
+.bandera-frente {
+  position: relative;
+  z-index: 9999 !important; /* Asegura que esté siempre al frente */
+  margin-left: 400px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  cursor: pointer;
+}
+
+.bandera-frente:hover {
+  transform: translateY(-10px) scale(1.05); /* Se eleva y agranda un poco */
+  box-shadow: 0 10px 20px rgba(255, 255, 255, 0.3); /* Luz al pasar el mouse */
+}
+

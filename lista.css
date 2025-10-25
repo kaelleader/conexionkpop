@@ -1,0 +1,95 @@
+.lista-caracteristicas {
+  list-style-type: disc;      /* Viñetas tipo punto */
+  text-align: left;           /* Texto alineado a la izquierda */
+  margin: 20px auto 0;        /* Centra el bloque horizontalmente */
+  padding-left: 40px;         /* Sangría a la izquierda para que se vea ordenado */
+  color: white;               /* Color del texto */
+  font-size: 1rem;
+  line-height: 1.8;
+  max-width: 600px;           /* Evita que se estire mucho en pantallas grandes */
+}
+
+.lista-caracteristicas li::marker {
+  color: #7e22ce;             /* Color morado para las viñetas */
+  font-size: 1.2rem;
+}
+
+
+
+/* //---------------------------------------- */
+
+
+
+/* 🔮 Fondo oscuro semi-transparente */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(10, 10, 10, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+/* Oculto por defecto */
+.hidden {
+  display: none;
+}
+
+/* 🌟 Ventana con glow morado animado */
+.modal-window {
+  position: relative;
+  width: 1200px;
+  height: 700px;
+  background-color: #0f0a1f;
+  border-radius: 15px;
+  box-shadow: 0 0 25px 6px rgba(150, 60, 255, 0.8);
+  overflow: hidden;
+  animation: aparecer 0.4s ease-out, glowPulse 2s infinite ease-in-out alternate;
+}
+
+/* Iframe interno */
+.modal-iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 15px;
+}
+
+/* Botón cerrar */
+.modal-close {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  background: rgba(255,255,255,0.1);
+  color: white;
+  border: none;
+  font-size: 20px;
+  padding: 5px 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+.modal-close:hover {
+  background: #7e22ce;
+}
+
+/* ✨ Animación de entrada */
+@keyframes aparecer {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* 💜 Animación “neón pulsante” */
+@keyframes glowPulse {
+  0% {
+    box-shadow: 0 0 25px 6px rgba(150, 60, 255, 0.8);
+  }
+  100% {
+    box-shadow: 0 0 35px 10px rgba(180, 90, 255, 1);
+  }
+}
+
