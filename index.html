@@ -1,12 +1,125 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Mi página en GitHub Pages</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Página Web</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="stilos.css">
+  <link rel="stylesheet" href="stilos2.css">
+  <link rel="stylesheet" href="bandera.css">
+  <link rel="stylesheet" href="video.css">
+  <link rel="stylesheet" href="robot.css">
+  
+  <script src="script.js"></script>
+
+  <script defer  src="robot.js"></script>
+  
 </head>
-<body style="background-color: yellow;">
-  <h1>Hola — mi sitio en GitHub Pages</h1>
-  <p>Publicado con GitHub Pages.</p>
+<body class="bg-cover bg-center h-screen" style="background-image: url('fondo.jpg')">
+  <!-- <div class="flex h-screen"> -->
+    <div class="flex min-h-screen">
+
+    <div class="w-64 bg-gray-900 text-white p-4 flex flex-col">
+      <div class="mb-4">
+        <img src="logo.png" alt="Logo" class="w-32 h-32 mx-auto">
+      </div>
+
+
+      
+
+      <a href="index.html"
+   class="flex items-center justify-center py-2 px-6 mb-2 bg-gray-800 hover:bg-gray-700 rounded text-white sidebar-btn">
+  Inicio
+</a>
+
+
+
+
+
+      <a href="acerca.html"
+   class="flex items-center justify-center py-2 px-6 mb-2 bg-gray-800 hover:bg-gray-700 rounded text-white sidebar-btn">
+  Acerca de
+</a>
+
+
+
+      
+
+           <a href="modelos.html"
+   class="flex items-center justify-center py-2 px-6 mb-2 bg-gray-800 hover:bg-gray-700 rounded text-white sidebar-btn">
+  Players
+</a>
+
+
+
+           <a href="terminos.html"
+   class="flex items-center justify-center py-2 px-6 mb-2 bg-gray-800 hover:bg-gray-700 rounded text-white sidebar-btn">
+  Términos de compra
+</a>
+
+      
+      
+      
+      
+      <!-- <button class="py-2 px-4 mb-2 bg-gray-800 hover:bg-gray-700 rounded">Idioma - ES</button> -->
+
+
+
+    </div>
+    <div class="flex-1 p-4 main-area">
+
+      
+        <!-- Contenido de la página -->
+<div class="contenido-radio text-center mt-40">
+  <h1 class="titulo-radio">Kael leader</h1>
+  <p class="descripcion-radio">
+   Hola! Soy Kael, mucho gusto! Soy un apasionado de la música coreana, en especial del old K-pop de la segunda generación (¡Generation 2 para los que saben!). Me encanta todo lo relacionado con las webs, la codificacion y la tecnología.
+Mi signo zodiacal es Libra, lo que me hace un incognito para mis amigos, pero también tengo mi lado serio cuando se trata de cosas importantes. Me gusta explorar diferentes aspectos de la vida y aprender nuevas cosas.
+  </p>
+</div>
+
+<!-- <center>
+  <iframe src="robot.html" frameborder="0" width="900" height="500"></iframe>
+</center> -->
+
+
+
+<img src="bandera.jpg" alt="Bandera de Corea del Sur"
+     class="mx-auto mt-12 rounded shadow-lg w-40 bandera-frente"/>
+
+
+     <div id="video" class="flex justify-center mt-10">
+  <div class="video-container">
+    <iframe 
+      width="560" 
+      height="315" 
+      src="https://www.youtube.com/embed/4JycZ3ANsDA?si=4X2zoBrhHZ9uZdI4" 
+      title="YouTube video player" 
+      frameborder="0" 
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+      referrerpolicy="strict-origin-when-cross-origin" 
+      allowfullscreen>
+    </iframe>
+  </div>
+</div>
+
+
+<div class="robot">
+  <div class="cabeza"></div>
+  <div class="cuerpo"></div>
+  <div class="brazo-izquierdo"></div>
+  <div class="brazo-derecho"></div>
+  <div class="pierna-izquierda"></div>
+  <div class="pierna-derecha"></div>
+</div>
+
+
+
+
+        
+    </div>
+  </div>
 </body>
 </html>
