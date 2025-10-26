@@ -126,16 +126,28 @@
 /* Botón de cierre */
 .cerrar {
   position: absolute;
-  top: 10px;
+  top: 550px;
   right: 15px;
-  color: white;
+  /* Nuevas propiedades para el fondo redondo */
+  background-color: #333; /* Un gris oscuro para el fondo del botón */
+  color: white; /* Color de la 'X' */
+  border-radius: 50%; /* Hace el fondo completamente redondo */
+  width: 35px; /* Ancho del área del botón */
+  height: 35px; /* Alto del área del botón (igual al ancho para un círculo) */
+  display: flex; /* Para centrar la 'X' dentro del círculo */
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+
+
   font-size: 28px;
   font-weight: bold;
   cursor: pointer;
   transition: color 0.3s;
 }
 .cerrar:hover {
-  color: #b05cff;
+  background-color: #555; /* Color del fondo al pasar el ratón */
+  color: #b05cff; /* Color de la 'X' al pasar el ratón */
+  transform: scale(1.1); /* Ligero efecto de escala al pasar el ratón */
 }
 
 /* Enlaces */
