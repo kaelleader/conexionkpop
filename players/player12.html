@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Página Web</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="../stilos.css">
+  <link rel="stylesheet" href="../stilos2.css">
+  <link rel="stylesheet" href="../lista.css">
+</head>
+<!-- <body class="bg-cover bg-center h-screen" style="background-image: url('../fondo.jpg')"> -->
+    <body class="bg-cover bg-center h-screen" style="
+    background-image: url('../fondo.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;">
+  <!-- <div class="flex h-screen"> -->
+    <div class="flex min-h-screen">
+
+    <div class="w-64 bg-gray-900 text-white p-4 flex flex-col">
+      <div class="mb-4">
+        <img src="../logo.png" alt="Logo" class="w-32 h-32 mx-auto">
+      </div>
+
+
+      <a href="../index.html"
+   class="flex items-center justify-center py-2 px-6 mb-2 bg-gray-800 hover:bg-gray-700 rounded text-white sidebar-btn">
+  Inicio
+</a>
+
+      <a href="../acerca.html"
+   class="flex items-center justify-center py-2 px-6 mb-2 bg-gray-800 hover:bg-gray-700 rounded text-white sidebar-btn">
+  Acerca de
+</a>
+
+           <a href="../modelos.html"
+   class="flex items-center justify-center py-2 px-6 mb-2 bg-gray-800 hover:bg-gray-700 rounded text-white sidebar-btn">
+  Players
+</a>
+
+           <a href="../terminos.html"
+   class="flex items-center justify-center py-2 px-6 mb-2 bg-gray-800 hover:bg-gray-700 rounded text-white sidebar-btn">
+  Términos de compra
+</a>
+
+      
+      <!-- <button class="py-2 px-4 mb-2 bg-gray-800 hover:bg-gray-700 rounded">Idioma - ES</button> -->
+
+    </div>
+    <div class="flex-1 p-4 main-area">
+
+<div class="contenido-radio text-center mt-40">
+  <h1 class="titulo-radio">PLAYER SINGLE V2 </h1>
+  <p class="descripcion-radio">
+    Este es nuestro doceaceavo player, que tiene las siguientes características:
+  </p>
+
+  <ul class="lista-caracteristicas">
+
+<li>Diseño moderno, adaptable y personalizable.</li> 
+<li>Totalmente compatible con los navegadores web más actuales.</li> 
+<li>Botones de las redes sociales: Facebook, YouTube, Instagram, WhatsApp y TikTok.</li>
+<li>Botones para enlaces de aplicaciones móviles Android e iOS.</li>
+<li>Boton de letras de la cancion en tiempo real (si están disponibles en la API).</li>
+<li>Boton TV integrada, compatible con formato youtube y otros. NO m3u8</li>
+<li>Boton para historial, para mostrar las canciones que han sonado anteriormente.</li>
+<li>Integración con múltiples APIs musicales (iTunes, Deezer, Spotify, MusicBrainz, Discogs y TheAudioDB) para mostrar carátulas de álbumes y artistas.</li> 
+<li>Funciones de personalizacion logo, eslogan de su emisora.</li>
+<li>Funcion de caratulas, para mostrar los covers y videos cuando suene determinada cancion.</li>
+
+
+<ul class="lista-caracteristicas">
+  <li>
+    Ejemplo versión completa,
+    <a href="#" onclick="abrirModal('https://panel.conexionkpop.com/playerdemo13/'); return false;" class="enlace-click">>> click</a>
+  </li>
+  <!-- <li>
+    Ejemplo versión simplificada,
+    <a href="#" onclick="abrirModal('https://panel.conexionkpop.com/playerdemo9_simplificado/'); return false;" class="enlace-click">>> click</a>
+  </li> -->
+</ul>
+
+<!-- Modal -->
+<div id="modal-demo" class="modal">
+  <div class="modal-content">
+    <span class="cerrar" onclick="cerrarModal()">&times;</span>
+    <iframe id="iframe-demo" src="" width="100%" height="650" frameborder="0"></iframe>
+  </div>
+</div>
+
+<style>
+/* Fondo oscuro con desenfoque */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.75);
+  backdrop-filter: blur(4px);
+  justify-content: center;
+  align-items: center;
+}
+
+/* Contenedor principal del modal */
+.modal-content {
+  position: relative;
+  background: #111;
+  border-radius: 14px;
+  width: 1200px;             /* ⬅️ Más ancho */
+  max-width: 96%;
+  box-shadow: 0 0 35px rgba(0,0,0,0.6);
+  border: 2px solid #7e22ce;
+  overflow: hidden;
+  animation: aparecer 0.3s ease-out;
+}
+
+/* Efecto de aparición */
+@keyframes aparecer {
+  from {opacity: 0; transform: scale(0.9);}
+  to {opacity: 1; transform: scale(1);}
+}
+
+/* Botón de cierre */
+.cerrar {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: white;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+.cerrar:hover {
+  color: #b05cff;
+}
+
+/* Enlaces */
+.enlace-click {
+  color: #b05cff;
+  font-weight: 600;
+  text-decoration: none;
+  margin-left: 5px;
+}
+.enlace-click:hover {
+  text-decoration: underline;
+  color: #d2a4ff;
+}
+</style>
+
+<script>
+function abrirModal(url) {
+  const modal = document.getElementById("modal-demo");
+  const iframe = document.getElementById("iframe-demo");
+  iframe.src = url;
+  modal.style.display = "flex";
+}
+
+function cerrarModal() {
+  const modal = document.getElementById("modal-demo");
+  const iframe = document.getElementById("iframe-demo");
+  modal.style.display = "none";
+  iframe.src = "";
+}
+</script>
+
+
+
+<!-- //---------------------------------------------- -->
+</ul>
+</div>       
+    </div>
+  </div>
+</body>
+</html>
