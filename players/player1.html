@@ -1,65 +1,50 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mi Página Web</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="../styles.css">
-  <link rel="stylesheet" href="../stilos.css">
-  <link rel="stylesheet" href="../stilos2.css">
-  <link rel="stylesheet" href="../lista.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Página Web</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../stilos.css">
+    <link rel="stylesheet" href="../stilos2.css">
+    <link rel="stylesheet" href="../lista.css">
 </head>
-<!-- <body class="bg-cover bg-center h-screen" style="background-image: url('../fondo.jpg')"> -->
-  <body class="bg-cover bg-center h-screen" style="
+<body class="bg-cover bg-center h-screen" style="
     background-image: url('../fondo.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     min-height: 100vh;">
-    
-  <!-- <div class="flex h-screen"> -->
+
     <div class="flex min-h-screen">
+        <div class="w-64 bg-gray-900 text-white p-4 flex flex-col">
+            <div class="mb-4">
+                <img src="../logo.png" alt="Logo" class="w-32 h-32 mx-auto">
+            </div>
 
-    <div class="w-64 bg-gray-900 text-white p-4 flex flex-col">
-      <div class="mb-4">
-        <img src="../logo.png" alt="Logo" class="w-32 h-32 mx-auto">
-      </div>
+            <a href="../index.html" class="flex items-center justify-center py-2 px-6 mb-2 bg-gray-800 hover:bg-gray-700 rounded text-white sidebar-btn">
+                Inicio
+            </a>
+            <a href="../acerca.html" class="flex items-center justify-center py-2 px-6 mb-2 bg-gray-800 hover:bg-gray-700 rounded text-white sidebar-btn">
+                Acerca de
+            </a>
+            <a href="../modelos.html" class="flex items-center justify-center py-2 px-6 mb-2 bg-gray-800 hover:bg-gray-700 rounded text-white sidebar-btn">
+                Players
+            </a>
+            <a href="../terminos.html" class="flex items-center justify-center py-2 px-6 mb-2 bg-gray-800 hover:bg-gray-700 rounded text-white sidebar-btn">
+                Términos de compra
+            </a>
+        </div>
+        
+        <div class="flex-1 p-4 main-area">
+            <div class="contenido-radio text-center mt-40">
+                <h1 class="titulo-radio">MAIN PLAYER</h1>
+                <p class="descripcion-radio">
+                    Este es nuestro primer player, que tiene las siguientes características:
+                </p>
 
-
-      <a href="../index.html"
-   class="flex items-center justify-center py-2 px-6 mb-2 bg-gray-800 hover:bg-gray-700 rounded text-white sidebar-btn">
-  Inicio
-</a>
-
-      <a href="../acerca.html"
-   class="flex items-center justify-center py-2 px-6 mb-2 bg-gray-800 hover:bg-gray-700 rounded text-white sidebar-btn">
-  Acerca de
-</a>
-
-           <a href="../modelos.html"
-   class="flex items-center justify-center py-2 px-6 mb-2 bg-gray-800 hover:bg-gray-700 rounded text-white sidebar-btn">
-  Players
-</a>
-
-           <a href="../terminos.html"
-   class="flex items-center justify-center py-2 px-6 mb-2 bg-gray-800 hover:bg-gray-700 rounded text-white sidebar-btn">
-  Términos de compra
-</a>
-
-      <!-- <button class="py-2 px-4 mb-2 bg-gray-800 hover:bg-gray-700 rounded">Idioma - ES</button> -->
-
-    </div>
-    <div class="flex-1 p-4 main-area">
-
-<div class="contenido-radio text-center mt-40">
-  <h1 class="titulo-radio">MAIN PLAYER</h1>
-  <p class="descripcion-radio">
-    Este es nuestro primer player, que tiene las siguientes características:
-  </p>
-
-
-  <ul class="lista-caracteristicas">
-  <li>Diseño moderno, adaptable y totalmente personalizable.</li>
+                <ul class="lista-caracteristicas">
+                      <li>Diseño moderno, adaptable y totalmente personalizable.</li>
   <li>Compatible con todos los navegadores web actuales.</li>
   <li>Visualizador dinámico de carátulas de álbum en tiempo real.</li>
   <li>Modo oscuro o claro, seleccionable por el usuario.</li>
@@ -77,36 +62,34 @@
   <li>Totalmente configurable: muestra solo las secciones que tú elijas.  
       Un reproductor moderno, flexible y hecho a tu medida.</li>
   <li>Permite cambiar todos los textos y botones al idioma que prefieras.</li>
+                </ul>
 
-  <ul class="lista-caracteristicas">
+                <ul class="lista-caracteristicas">
+                    <li>
+                        Ejemplo versión completa,
+                        <a href="#" onclick="abrirModal('https://panel.conexionkpop.com/playerdemo1/'); return false;" class="enlace-click">>> click</a>
+                    </li>
+                    <li>
+                        Ejemplo versión simplificada,
+                        <a href="#" onclick="abrirModal('https://panel.conexionkpop.com/conexion_kpop_new/'); return false;" class="enlace-click">>> click</a>
+                    </li>
+                </ul>
 
+                <div id="modal-demo" class="modal">
+                    <div id="modal-content" class="modal-content">
+                        
+                        <div id="modal-header">
+                            <span class="cerrar" onclick="cerrarModal()">&times;</span>
+                        </div>
+                        <iframe id="iframe-demo" src="" width="100%" frameborder="0"></iframe>
+                    </div>
+                </div>
 
-  <!-- <li>
-    Ejemplo versión completa,
-    <a href="https://panel.conexionkpop.com/playerdemo1/" target="_blank" rel="noopener noreferrer" class="enlace-click">>> click</a>
-  </li> -->
+                </div>
+        </div>
+    </div>
 
-  
-<ul class="lista-caracteristicas">
-  <li>
-    Ejemplo versión completa,
-    <a href="#" onclick="abrirModal('https://panel.conexionkpop.com/playerdemo1/'); return false;" class="enlace-click">>> click</a>
-  </li>
-  <li>
-    Ejemplo versión simplificada,
-    <a href="#" onclick="abrirModal('https://panel.conexionkpop.com/conexion_kpop_new/'); return false;" class="enlace-click">>> click</a>
-  </li>
-</ul>
-
-<!-- Modal -->
-<div id="modal-demo" class="modal">
-  <div class="modal-content">
-    <span class="cerrar" onclick="cerrarModal()">&times;</span>
-    <iframe id="iframe-demo" src="" width="100%" height="650" frameborder="0"></iframe>
-  </div>
-</div>
-
-<style>
+    <style>
 /* Fondo oscuro con desenfoque */
 .modal {
   display: none;
@@ -117,54 +100,91 @@
   background: rgba(0,0,0,0.75);
   backdrop-filter: blur(4px);
   justify-content: center;
-  align-items: center;
+  align-items: center; 
+  /* Eliminamos padding-top si se usó para centrar/bajar */
 }
 
-/* Contenedor principal del modal */
-.modal-content {
-  position: relative;
+/* Contenedor principal del modal - CLAVE para la ARRASTRABILIDAD */
+#modal-content {
+  position: absolute; /* ⬅️ Permite moverlo con JavaScript (top/left) */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Posición inicial en el centro */
+
   background: #111;
   border-radius: 14px;
-  width: 1200px;             /* ⬅️ Más ancho */
+  width: 1200px;
   max-width: 96%;
   box-shadow: 0 0 35px rgba(0,0,0,0.6);
   border: 2px solid #7e22ce;
-  overflow: hidden;
+
+  /* Propiedades de Scroll Interno */
+  max-height: 90vh; /* Limita la altura de la caja a la ventana visible */
+  overflow-y: auto; /* Permite el scroll vertical dentro del modal */
+  overflow-x: hidden; /* Oculta el scroll horizontal si no es necesario */
+  /* overflow: hidden; */ /* Comentado/Removido */
+
   animation: aparecer 0.3s ease-out;
 }
 
 /* Efecto de aparición */
 @keyframes aparecer {
-  from {opacity: 0; transform: scale(0.9);}
-  to {opacity: 1; transform: scale(1);}
+  from {opacity: 0; transform: translate(-50%, -50%) scale(0.9);}
+  to {opacity: 1; transform: translate(-50%, -50%) scale(1);}
 }
 
-/* Botón de cierre */
+/* ⬇️ NUEVO: Barra de Arrastre (Header) ⬇️ */
+#modal-header {
+  height: 40px; 
+  cursor: grab; /* Indica que el elemento es arrastrable */
+  background-color: #222; /* Un color ligeramente diferente al fondo del modal */
+  border-top-left-radius: 14px;
+  border-top-right-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; 
+  padding-right: 15px;
+}
+
+/* Botón de cierre - Rediseñado para el Header */
 .cerrar {
-  position: absolute;
-  top: 550px;
-  right: 15px;
-  /* Nuevas propiedades para el fondo redondo */
-  background-color: #333; /* Un gris oscuro para el fondo del botón */
-  color: white; /* Color de la 'X' */
-  border-radius: 50%; /* Hace el fondo completamente redondo */
-  width: 35px; /* Ancho del área del botón */
-  height: 35px; /* Alto del área del botón (igual al ancho para un círculo) */
-  display: flex; /* Para centrar la 'X' dentro del círculo */
-  justify-content: center; /* Centra horizontalmente */
-  align-items: center; /* Centra verticalmente */
+  position: static; /* Fluye dentro del flexbox del header */
+  /* Propiedades de fondo redondo */
+  background-color: #333; 
+  color: white; 
+  border-radius: 50%; 
+  width: 30px; 
+  height: 30px; 
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  /* Fin de propiedades de fondo redondo */
 
-
-  font-size: 28px;
+  font-size: 20px;
   font-weight: bold;
   cursor: pointer;
-  transition: color 0.3s;
+  transition: all 0.3s;
 }
 .cerrar:hover {
-  background-color: #555; /* Color del fondo al pasar el ratón */
-  color: #b05cff; /* Color de la 'X' al pasar el ratón */
-  transform: scale(1.1); /* Ligero efecto de escala al pasar el ratón */
+  background-color: #555;
+  color: #b05cff;
 }
+
+/* Estilo del IFRAME */
+#iframe-demo {
+    /* AJUSTE CLAVE 1: Usa min-height para asegurar el tamaño de la ventana */
+    min-height: 700px; /* Vuelve a poner la altura mínima que deseas, ej: 650px */
+    
+    /* AJUSTE CLAVE 2: Asegura que el IFRAME ocupe el espacio sin scroll interno */
+    height: 100%; /* Si usas min-height, 100% es mejor */
+
+    width: 100%;
+    border: none;
+    display: block;
+
+    background-color: #ffffff;
+}
+
 
 /* Enlaces */
 .enlace-click {
@@ -179,31 +199,103 @@
 }
 </style>
 
-<script>
-function abrirModal(url) {
-  const modal = document.getElementById("modal-demo");
-  const iframe = document.getElementById("iframe-demo");
-  iframe.src = url;
-  modal.style.display = "flex";
-}
 
-function cerrarModal() {
-  const modal = document.getElementById("modal-demo");
-  const iframe = document.getElementById("iframe-demo");
-  modal.style.display = "none";
-  iframe.src = "";
-}
+   
+   <script>
+    // ----------------------------------------------------
+    // FUNCIONES MODAL
+    // ----------------------------------------------------
+    function abrirModal(url) {
+        const modal = document.getElementById("modal-demo");
+        const iframe = document.getElementById("iframe-demo");
+        iframe.src = url;
+        modal.style.display = "flex";
+        
+        // REINICIA la posición al centro cuando se abre
+        const content = document.getElementById("modal-content");
+        content.style.top = '50%';
+        content.style.left = '50%';
+        content.style.transform = 'translate(-50%, -50%)';
+    }
+
+    function cerrarModal() {
+        const modal = document.getElementById("modal-demo");
+        const iframe = document.getElementById("iframe-demo");
+        modal.style.display = "none";
+        iframe.src = "";
+    }
+    
+    // ----------------------------------------------------
+    // LÓGICA JAVASCRIPT PARA ARRASTRAR (DRAG & DROP)
+    // ----------------------------------------------------
+    
+    document.addEventListener('DOMContentLoaded', () => {
+        const modalContent = document.getElementById("modal-content");
+        const modalHeader = document.getElementById("modal-header");
+
+        if (modalContent && modalHeader) {
+            makeDraggable(modalContent, modalHeader);
+        }
+    });
+
+    function makeDraggable(element, handle) {
+        let pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+
+        if (handle) {
+            handle.onmousedown = dragMouseDown;
+        } else {
+            element.onmousedown = dragMouseDown;
+        }
+
+        function dragMouseDown(e) {
+            e = e || window.event;
+            e.preventDefault();
+            
+            element.style.transform = 'none';
+
+            pos3 = e.clientX;
+            pos4 = e.clientY;
+            
+            document.onmouseup = closeDragElement;
+            document.onmousemove = elementDrag;
+        }
+
+        function elementDrag(e) {
+            e = e || window.event;
+            e.preventDefault();
+
+            pos1 = pos3 - e.clientX;
+            pos2 = pos4 - e.clientY;
+            pos3 = e.clientX;
+            pos4 = e.clientY;
+            
+            // Aplicar la nueva posición
+            element.style.top = (element.offsetTop - pos2) + "px";
+            element.style.left = (element.offsetLeft - pos1) + "px";
+        }
+
+        function closeDragElement() {
+            document.onmouseup = null;
+            document.onmousemove = null;
+        }
+    }
+
+    // ----------------------------------------------------
+    // DESHABILITAR CLIC DERECHO (MENÚ CONTEXTUAL)
+    // ----------------------------------------------------
+    document.addEventListener('contextmenu', function(e) {
+        // Detiene la acción predeterminada del clic derecho
+        e.preventDefault(); 
+        // Nota: Esto desactiva el menú contextual en todo el documento.
+    });
+
 </script>
 
 
 
-<!-- //---------------------------------------------- -->
 
-</ul>
 
-</div>
-     
-    </div>
-  </div>
+
 </body>
 </html>
+
